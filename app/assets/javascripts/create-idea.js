@@ -1,5 +1,5 @@
 function createIdea() {
-  $('#save').on('click', function(){
+  $('#save').on('click', function() {
     $.ajax({
       type: "POST",
       url: "/api/v1/ideas",
