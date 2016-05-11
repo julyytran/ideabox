@@ -17,6 +17,7 @@ group :development, :test do
   gem 'pry-nav'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'launchy'
 end
 
 group :test do

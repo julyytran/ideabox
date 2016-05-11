@@ -14,13 +14,13 @@ feature "user can view all ideas", :js => true do
       expect(page).to have_content "swill"
     }
 
-    within("li:second-child") {
+    within("li:nth-child(2)") {
       expect(page).to have_content "Awesome Idea"
       expect(page).to have_content "I have awesome ideas"
       expect(page).to have_content "swill"
     }
 
-    within("li:third-child") {
+    within("li:nth-child(3)") {
       expect(page).to have_content "Legit Idea"
       expect(page).to have_content "I have legit ideas"
       expect(page).to have_content "swill"
