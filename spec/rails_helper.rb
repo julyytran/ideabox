@@ -32,4 +32,6 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  config.include Factory, type: :request
 end
