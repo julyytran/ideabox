@@ -11,11 +11,7 @@ function createIdea() {
         }
       },
       success: function(data) {
-        $('#ideas-list').append("<li class='idea'>"
-        + "<h4>" + data.title + "</h4>"
-        + "<p>" + data.body + "</br>"
-        + data.quality + "</p>"
-        + "</li>")
+        appendIdeas([data])
         $('#title').val('')
         $('#body').val('')
       }

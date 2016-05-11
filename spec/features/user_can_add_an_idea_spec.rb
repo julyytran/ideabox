@@ -1,5 +1,5 @@
 feature "user can add an idea", :js => true do
-  scenario "they see all the " do
+  scenario "they see their new idea add to the list " do
     create_ideas
 
     visit root_path
