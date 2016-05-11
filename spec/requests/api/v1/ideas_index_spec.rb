@@ -13,7 +13,7 @@ RSpec.describe "GET ideas index" do
     expect(idea).to eq ({
       "id" => idea["id"],
       "title" => "Kewl Idea",
-      "body" => "ideas on ideas",
+      "body" => "I have kewl ideas",
       "quality" => "swill",
       "created_at"=> idea["created_at"],
       "updated_at"=> idea["updated_at"]

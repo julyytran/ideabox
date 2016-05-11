@@ -2,26 +2,13 @@ $(document).ready(function () {
   renderIdeas();
 })
 
-function renderIdeas (){
+function renderIdeas () {
   $.getJSON( "/api/v1/ideas", function(data) {
     for (var i = 0; i < data.length; i++) {
-      debugger
-      $('#ideas-list').append("<div class='idea'>"
-      + data[i].title
-      + data[i].body
-      + data[i].quality
-      + "</div>")
+      $('#ideas-list').append("<li class='idea'>"
+      + "<h2>" + data[i].title + "</h2>"
+      + "<p>" + data[i].body + "</br>"
+      + data[i].quality + "</p>"
+      + "</li>")
     }})
-
-
-
-  //   debugger
-  //   $.each(data, function(idea) {
-  //     $('#ideas-list').append("<div class='idea'>"
-  //     + idea.title
-  //     + idea.body
-  //     + idea.quality
-  //     + "</div>")
-  //   });
-  // })
 }
