@@ -8,12 +8,16 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'responders', '~> 2.0'
+gem 'selenium-webdriver'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
   gem 'pry-nav'
   gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :test do
