@@ -15,6 +15,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-nav'
   gem 'database_cleaner'
+  gem 'capybara'
 end
 
 group :test do

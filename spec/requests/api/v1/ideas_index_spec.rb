@@ -11,7 +11,7 @@ RSpec.describe "GET ideas index" do
     idea = json_body[0]
 
     expect(idea).to eq ({
-      "id" => 2,
+      "id" => idea["id"],
       "title" => "Kewl Idea",
       "body" => "ideas on ideas",
       "quality" => "swill",

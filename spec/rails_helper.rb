@@ -33,5 +33,5 @@ RSpec.configure do |config|
     end
   end
 
-  config.include Factory, type: :request
+  config.include Factory
 end
