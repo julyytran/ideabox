@@ -4,7 +4,7 @@ module Api
       respond_to :json
 
       def index
-        respond_with Idea.all
+        respond_with Idea.descending
       end
 
       def create

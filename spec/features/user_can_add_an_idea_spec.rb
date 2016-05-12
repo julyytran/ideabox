@@ -11,7 +11,7 @@ feature "user can add an idea", :js => true do
 
     wait_for_ajax
 
-    within("li:nth-child(4)") {
+    within("li:first-child") {
       expect(page).to have_content 'NEW IDEA!'
       expect(page).to have_content 'I have a new idea!'
       expect(page).to have_content 'swill'

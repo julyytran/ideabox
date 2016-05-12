@@ -9,8 +9,8 @@ feature "user can view all ideas", :js => true do
     expect(page).to have_selector("li", count: 3)
 
     within("li:first-child") {
-      expect(page).to have_content "Kewl Idea"
-      expect(page).to have_content "I have kewl ideas"
+      expect(page).to have_content "Legit Idea"
+      expect(page).to have_content "I have legit ideas"
       expect(page).to have_content "swill"
     }
 
@@ -21,8 +21,8 @@ feature "user can view all ideas", :js => true do
     }
 
     within("li:nth-child(3)") {
-      expect(page).to have_content "Legit Idea"
-      expect(page).to have_content "I have legit ideas"
+      expect(page).to have_content "Kewl Idea"
+      expect(page).to have_content "I have kewl ideas"
       expect(page).to have_content "swill"
     }
   end

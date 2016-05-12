@@ -10,8 +10,8 @@ function createIdea() {
           body: $('#body').val()
         }
       },
-      success: function(data) {
-        appendIdeas([data])
+      success: function(datum) {
+        $('#ideas-list').prepend(createIdeaHTML(datum))
         $('#title').val('')
         $('#body').val('')
       }
