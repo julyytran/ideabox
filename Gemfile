@@ -20,6 +20,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
+  gem 'teaspoon'
+  gem 'teaspoon-mocha'
 end
 
 group :test do

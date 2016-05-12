@@ -11,7 +11,7 @@ feature "user can delete an idea", :js => true do
 
     wait_for_ajax
 
-    expect(page).to_not have_content "Kewl Idea"
-    expect(page).to_not have_content "I have kewl ideas"
+    expect(page).to_not have_content "Legit Idea"
+    expect(page).to_not have_content "I have legit ideas"
   end
 end
