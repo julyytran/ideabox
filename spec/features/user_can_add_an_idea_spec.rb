@@ -5,7 +5,7 @@ feature "user can add an idea", :js => true do
     visit root_path
     wait_for_ajax
 
-    fill_in 'Title', :with => 'NEW IDEA!'
+    fill_in 'title', :with => 'NEW IDEA!'
     fill_in 'body', :with => 'I have a new idea!'
     click_on 'Save!'
 
