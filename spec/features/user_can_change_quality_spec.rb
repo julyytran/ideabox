@@ -31,7 +31,7 @@ feature "user can change quality", :js => true do
   end
 
   scenario "they downvote" do
-    Idea.create(title: "Genius", body: "genius idea", quality: "genius")
+    Idea.create(title: "A real good idea", body: "real good idea", quality: "genius")
 
     visit root_path
     wait_for_ajax
@@ -54,7 +54,7 @@ feature "user can change quality", :js => true do
   end
 
   scenario "swill cannot be downvoted more" do
-    Idea.create(title: "Swill", body: "swill idea", quality: "swill")
+    Idea.create(title: "Bad idea", body: "so bad idea", quality: "swill")
 
     visit root_path
     wait_for_ajax
@@ -73,7 +73,7 @@ feature "user can change quality", :js => true do
   end
 
   scenario "genius cannot be upvoted more" do
-    Idea.create(title: "Genius", body: "genius idea", quality: "genius")
+    Idea.create(title: "A real good idea", body: "real good idea", quality: "genius")
 
     visit root_path
     wait_for_ajax
@@ -83,7 +83,7 @@ feature "user can change quality", :js => true do
     expect(page).to_not have_content "plausible"
 
     within("li:first-child") {
-      click_on "Thumbs Down!"
+      click_on "Thumbs Up!"
     }
 
     expect(page).to have_content "genius"
