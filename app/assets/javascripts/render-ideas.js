@@ -18,8 +18,8 @@ function createIdeaHTML (datum) {
   + truncateBodies(datum.body)
   + "</br></p>"
   + "<p class=quality>" + datum.quality + "</p>"
-  + "<button type='button' name='button' class='btn btn-info' id='delete'>Thumbs Up!</button>"
-  + "<button type='button' name='button' class='btn btn-warning' id='delete'>Thumbs Down!</button>"
+  + "<button type='button' name='button' class='btn btn-info' id='upvote'>Thumbs Up!</button>"
+  + "<button type='button' name='button' class='btn btn-warning' id='downvote'>Thumbs Down!</button>"
   + "<button type='button' name='button' class='btn btn-danger' id='delete'>Delete!</button>"
   + "</li>"
 }
