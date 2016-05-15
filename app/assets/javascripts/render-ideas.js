@@ -16,8 +16,8 @@ function createIdeaHTML (datum) {
   + "<h4 class='title'>" + datum.title + "</h4>"
   + "<p class='body'>"
   + truncateBodies(datum.body)
-  + "</br>"
-  + datum.quality + "</p>"
+  + "</br></p>"
+  + "<p class=quality>" + datum.quality + "</p>"
   + "<button type='button' name='button' class='btn btn-danger' id='delete'>Delete!</button>"
   + "</li>"
 }

@@ -3,4 +3,5 @@ $(document).ready(function () {
   createIdea();
   deleteIdea();
   editTitle();
+  editBody();
 });

@@ -9,6 +9,17 @@ function editTitle() {
   })
 }
 
+function editBody() {
+  $('#ideas-list').on('click', '.body', function() {
+    $(this).attr('contentEditable', 'true')
+    $(this).on('blur keydown', function(event) {
+      if (event.type === "blur" || event.keyCode === 13) {
+        editContent(this, {body: $(this).text()})
+      }
+    })
+  })
+}
+
 function editContent (ideaHTML, newContent) {
   $.ajax({
    type: "PATCH",
@@ -20,9 +31,8 @@ function editContent (ideaHTML, newContent) {
      }
    },
    dataType: "json",
-   success: function(data) {
-     debugger
-     $("#ideas-list #id=" + data.id).replaceWith(createIdeaHTML(datum))
+   success: function(datum) {
+     $("#ideas-list #" + datum.id).replaceWith(createIdeaHTML(datum))
    }
  })
 }
