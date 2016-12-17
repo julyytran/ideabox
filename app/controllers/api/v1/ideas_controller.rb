@@ -4,7 +4,7 @@ module Api
       respond_to :json
 
       def index
-        respond_with Idea.all
+        respond_with Idea.descending
       end
 
       def create
@@ -13,6 +13,10 @@ module Api
 
       def destroy
         render json: Idea.destroy(params[:id])
+      end
+
+      def update
+        render json: Idea.update(params["id"], idea_params)
       end
 
       private
